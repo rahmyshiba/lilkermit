@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lil Kermit - Meme Coin Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="kermit kermit-1">🐸</div>
+  <div class="kermit kermit-2">🐸</div>
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-image">
+          <img src="https://i.imgur.com/GEkU6ks.jpeg" alt="Lil Kermit Meme Coin Logo" />
+        </div>
+      </div>
+      <div class="social-icons">
+        <a href="https://x.com/lil_kermit7" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://t.me/lilkermitt" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>The Meme Coin That Leaps Ahead</h2>
+      <p>Join the ribbiting revolution with Lil Kermit - the meme coin that's making waves in the crypto pond with its unique approach and vibrant community.</p>
+
+      <div class="contract-box">
+        <div class="contract-header">
+          <h3><i class="fas fa-file-contract"></i> Contract Address</h3>
+        </div>
+        <div class="contract-address">
+          <span id="contract-text">y4BQazdkxvGdiHCLaX4Rr7FktBnT9jwd36XnJNxaMe8</span>
+        </div>
+        <button class="copy-btn" id="copy-btn">
+          <i class="fas fa-copy"></i> Copy to Clipboard
+        </button>
+      </div>
+
+      <div class="action-buttons">
+        <a href="https://x.com/lil_kermit7" target="_blank" class="btn btn-twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://t.me/lilkermitt" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> Telegram</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 class="section-title">Why Choose Lil Kermit?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-users"></i></div>
+          <h3>Community Driven</h3>
+          <p>Our project thrives on community participation. Every holder has a voice in the future development of Lil Kermit.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-lock"></i></div>
+          <h3>Secure & Transparent</h3>
+          <p>Built with security as the top priority. All transactions are transparent on the blockchain for everyone to verify.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Growth Potential</h3>
+          <p>With a solid roadmap and dedicated team, Lil Kermit is positioned for long-term growth in the meme coin ecosystem.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 Lil Kermit Meme Coin. All rights reserved. This is a community project, not financial advice.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("copy-btn").addEventListener("click", function () {
+      const contractAddress = "y4BQazdkxvGdiHCLaX4Rr7FktBnT9jwd36XnJNxaMe8";
+      navigator.clipboard.writeText(contractAddress).then(() => {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => {
+          this.innerHTML = originalText;
+        }, 2000);
+      }).catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+    });
+  </script>
+</body>
+</html>
